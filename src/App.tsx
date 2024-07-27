@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { MultilineTextInput, Container, Title } from './components/TextInput'
+import TreeView from './components/DirectoryTreeView'
 
-function App() {
+const defaultValue =
+  "['/bin','/boot','/dev','/etc','/home/user/dir1','/home/user/dir2','/lib','/lib64','/media','/mnt','/opt','/proc','/root','/run','/sbin','/srv','/sys','/tmp','/usr/bin','/usr/lib','/usr/local/bin','/usr/local/lib','/var/log','/var/tmp']"
+
+const App: React.FC = () => {
+  const [value, setValue] = React.useState(defaultValue)
+  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setValue(event.target.value)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container>
+      <Title>Directory Visualizer</Title>
+      <MultilineTextInput
+        value={value}
+        onChange={handleChange}
+        placeholder='Enter an Array of Directories e.g. ["src/components", "public", "node_modules"]'
+      />
+      <TreeView pathString={value} />
+    </Container>
+  )
 }
 
-export default App;
+export default App
