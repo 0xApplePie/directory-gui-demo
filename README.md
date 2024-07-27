@@ -2,6 +2,8 @@
 
 This project showcases a simple React App. The user can enter an array of file path strings (e.g. ['root/test', 'dev/dir1'] ) and the App will visualize it by rendering a collapsable tree.
 
+# [Deployment Link here](https://directory-gui-demo-4fww7tcb9-0xapplepies-projects.vercel.app/)
+
 ## Improvements
 
 Further considerations and improvements:
