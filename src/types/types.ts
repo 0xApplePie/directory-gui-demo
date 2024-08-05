@@ -5,4 +5,5 @@ export type Directory = {
 
 export type TreeNodeProps = {
   node: Directory
+  level?: number
 }

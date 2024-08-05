@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
           target='_blank'
           rel='noopener noreferrer'
         >
-          View on Sourcecode on GitHub
+          View Sourcecode on GitHub
         </FooterLink>
       </p>
     </FooterContainer>

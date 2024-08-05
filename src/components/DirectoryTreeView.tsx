@@ -52,11 +52,13 @@ const TreeView: React.FC<TreeViewProps> = ({ pathString }) => {
   const paths = parsePaths(pathString)
   const treeData = transformToTree(paths)
 
+  //console.log(treeData)
+
   return (
     <TreeViewContainer>
       {treeData.map((node, index) => (
         <>
-          <TreeNode key={index} node={node} />
+          <TreeNode key={index} node={node} level={0} />
         </>
       ))}
     </TreeViewContainer>
