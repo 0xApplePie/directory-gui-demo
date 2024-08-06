@@ -44,8 +44,25 @@ interface MultilineTextInputProps {
 const unixPathRegex = /^\/([A-Za-z0-9_.-]+\/?)*$/
 
 const validatePaths = (text: string): boolean => {
-  const paths = text.split('\n').map((line) => line.trim())
-  return paths.every((path) => unixPathRegex.test(path))
+  // Parse input assuming it's a single string containing all paths separated by commas
+  const paths = text
+    .slice(1, -1)
+    .split("','")
+    .map((line) => line.trim().replace(/^'|'$/g, ''))
+
+  console.log('Paths:', paths)
+
+  // Log each path and the result of its validation
+  paths.forEach((path) =>
+    console.log(`Testing path: ${path}, Result: ${unixPathRegex.test(path)}`)
+  )
+
+  // Check if all paths are valid
+  const allValid = paths.every((path) => unixPathRegex.test(path))
+
+  console.log('All paths valid:', allValid)
+
+  return allValid
 }
 
 export const MultilineTextInput: React.FC<MultilineTextInputProps> = ({
