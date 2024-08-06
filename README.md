@@ -16,6 +16,7 @@ Further considerations and improvements:
 - Test on all target devices (screen size, browsers, ...)
 - Multi Languange Support / Localization
 - better input cleaning / edge case handling
+- more complex collapse state management approach
 
 ## Available Scripts
 
