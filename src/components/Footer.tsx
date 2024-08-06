@@ -3,13 +3,12 @@ import styled from 'styled-components'
 import { colors } from '../styles/colors'
 
 const FooterContainer = styled.footer`
-  width: 100%;
   padding: 1rem;
+  margin-top: 1rem;
   background-color: ${colors.textColor};
   color: ${colors.white};
   text-align: center;
   bottom: 0;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 `
 
 const FooterLink = styled.a`
