@@ -3,7 +3,7 @@
 This project showcases a simple React App. The user can enter an array of file path strings (e.g. ['root/test', 'dev/dir1'] ) and the App will visualize it by rendering a collapsable tree.
 Only invalid Unix paths will be marked, otherwise the App tries to render as much of the given input as possible.
 
-# [Deployment Link here](https://directory-gui-demo-4fww7tcb9-0xapplepies-projects.vercel.app/)
+# [Deployment Link here](https://directory-gui-demo-git-main-0xapplepies-projects.vercel.app/)
 
 ## Improvements
 
@@ -11,6 +11,8 @@ Further considerations and improvements:
 
 - Dark Mode
 - possible different deployment
+- Automated Test for string inputs, could be integrated into CI/CD pipeline
+- Performance Optimizations
 
 ## Available Scripts
 
