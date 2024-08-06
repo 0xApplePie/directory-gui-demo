@@ -9,8 +9,7 @@ const WarningMessage = styled.div`
 `
 
 const TextArea = styled.textarea<{ isValid: boolean }>`
-  width: 90%;
-  max-width: 600px;
+  width: 100%;
   height: 200px;
   padding: 0.5rem;
   font-size: 1rem;
@@ -20,7 +19,6 @@ const TextArea = styled.textarea<{ isValid: boolean }>`
   resize: vertical;
   background-color: ${colors.paleGreyBlue};
   color: ${colors.textColor};
-
   &:focus {
     outline: none;
     border-color: ${colors.borderColor};
@@ -29,9 +27,9 @@ const TextArea = styled.textarea<{ isValid: boolean }>`
 
   ${(props) =>
     !props.isValid &&
-    css`
+    `
       border-color: ${colors.errorColor};
-      background-color: #fff0f0; // red for error
+      background-color: #fff0f0; /* Light red background for errors */
     `}
 `
 

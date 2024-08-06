@@ -1,17 +1,22 @@
 import styled from 'styled-components'
-import { colors } from '../styles/colors' // Import the color palette
+import { colors } from '../styles/colors'
 
 export const Container = styled.div`
-  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100vh;
-  background-color: ${colors.background}; // Use color from palette
+  width: 100%;
+  background-color: ${colors.background};
+  padding: 20px;
+  box-sizing: border-box;
 `
 
 export const Title = styled.h1`
   font-size: 2rem;
-  color: ${colors.textColor}; // Use color from palette
+  color: ${colors.textColor};
   margin-bottom: 20px;
+  flex: 0 0 auto;
+  text-align: center;
+  width: 100%;
 `

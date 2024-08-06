@@ -1,22 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
+import { colors } from '../styles/colors'
 
 const FooterContainer = styled.footer`
   width: 100%;
   padding: 1rem;
-  background-color: #282c34;
-  color: white;
+  background-color: ${colors.textColor};
+  color: ${colors.white};
   text-align: center;
   position: fixed;
   bottom: 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 `
 
 const FooterLink = styled.a`
-  color: #61dafb;
+  color: ${colors.borderColor};
   text-decoration: none;
+  font-weight: bold;
 
   &:hover {
     text-decoration: underline;
+    color: ${colors.errorColor};
   }
 `
 
