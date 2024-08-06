@@ -50,18 +50,7 @@ const validatePaths = (text: string): boolean => {
     .split("','")
     .map((line) => line.trim().replace(/^'|'$/g, ''))
 
-  console.log('Paths:', paths)
-
-  // Log each path and the result of its validation
-  paths.forEach((path) =>
-    console.log(`Testing path: ${path}, Result: ${unixPathRegex.test(path)}`)
-  )
-
-  // Check if all paths are valid
   const allValid = paths.every((path) => unixPathRegex.test(path))
-
-  console.log('All paths valid:', allValid)
-
   return allValid
 }
 
