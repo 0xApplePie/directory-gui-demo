@@ -5,7 +5,7 @@ import { colors } from '../styles/colors'
 const FooterContainer = styled.footer`
   padding: 1rem;
   margin-top: 1rem;
-  background-color: ${colors.textColor};
+  background-color: ${colors.white};
   color: ${colors.white};
   text-align: center;
   bottom: 0;
