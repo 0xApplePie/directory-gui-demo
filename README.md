@@ -15,6 +15,7 @@ Further considerations and improvements:
 - Performance Optimizations
 - Test on all target devices (screen size, browsers, ...)
 - Multi Languange Support / Localization
+- better input cleaning / edge case handling
 
 ## Available Scripts
 

@@ -19,7 +19,7 @@ const App: React.FC = () => {
       <MultilineTextInput
         value={value}
         onChange={handleChange}
-        placeholder='Enter an Array of Directories e.g. ["src/components", "public", "node_modules"]'
+        placeholder={`Enter an Array of Directories e.g. ['src/components', 'public', 'node_modules']`}
       />
       <TreeView pathString={value} />
       <Footer />
