@@ -8,7 +8,6 @@ const FooterContainer = styled.footer`
   background-color: ${colors.textColor};
   color: ${colors.white};
   text-align: center;
-  position: fixed;
   bottom: 0;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 `
