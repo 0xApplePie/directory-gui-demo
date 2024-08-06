@@ -3,35 +3,35 @@ import styled, { css } from 'styled-components'
 import { colors } from '../styles/colors'
 
 const WarningMessage = styled.div`
-  color: ${colors.errorColor}; // Use color from palette
+  color: ${colors.errorColor};
   font-weight: bold;
   margin-bottom: 10px;
 `
 
 const TextArea = styled.textarea<{ isValid: boolean }>`
-  width: 90%; /* Increase width for better visibility */
-  max-width: 600px; /* Add a maximum width to prevent it from becoming too wide on large screens */
-  height: 200px; /* Increase height to accommodate more text */
+  width: 90%;
+  max-width: 600px;
+  height: 200px;
   padding: 0.5rem;
   font-size: 1rem;
-  border: 1px solid ${colors.lightBlueGrey}; // Use color from palette
+  border: 1px solid ${colors.lightBlueGrey};
   border-radius: 0.25rem;
   box-sizing: border-box;
   resize: vertical;
-  background-color: ${colors.paleGreyBlue}; // Use color from palette
-  color: ${colors.textColor}; // Use color from palette
+  background-color: ${colors.paleGreyBlue};
+  color: ${colors.textColor};
 
   &:focus {
     outline: none;
-    border-color: ${colors.borderColor}; // Use color from palette
-    background-color: ${colors.white}; // Use color from palette
+    border-color: ${colors.borderColor};
+    background-color: ${colors.white};
   }
 
   ${(props) =>
     !props.isValid &&
     css`
-      border-color: ${colors.errorColor}; // Use color from palette
-      background-color: #fff0f0; // Light red background for errors
+      border-color: ${colors.errorColor};
+      background-color: #fff0f0; // red for error
     `}
 `
 
@@ -44,7 +44,6 @@ interface MultilineTextInputProps {
 const unixPathRegex = /^\/([A-Za-z0-9_.-]+\/?)*$/
 
 const validatePaths = (text: string): boolean => {
-  // Parse input assuming it's a single string containing all paths separated by commas
   const paths = text
     .slice(1, -1)
     .split("','")
