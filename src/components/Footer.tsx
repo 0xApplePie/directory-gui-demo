@@ -9,6 +9,7 @@ const FooterContainer = styled.footer`
   color: ${colors.white};
   text-align: center;
   bottom: 0;
+  border-radius: 5px;
 `
 
 const FooterLink = styled.a`
