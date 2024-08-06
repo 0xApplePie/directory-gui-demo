@@ -1,7 +1,8 @@
-import React from 'react'
-import { MultilineTextInput, Container, Title } from './components/TextInput'
+import React, { useState } from 'react'
+import { Container, Title } from './components/StyledComponents'
 import TreeView from './components/DirectoryTreeView'
 import Footer from './components/Footer'
+import { MultilineTextInput } from './components/TextInput'
 
 const defaultValue =
   "['/bin','/boot','/dev','/etc','/home/user/dir1','/home/user/dir2','/lib','/lib64','/media','/mnt','/opt','/proc','/root','/run','/sbin','/srv','/sys','/tmp','/usr/bin','/usr/lib','/usr/local/bin','/usr/local/lib','/var/log','/var/tmp']"
