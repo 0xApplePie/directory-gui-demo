@@ -1,6 +1,7 @@
 # Directory GUI Demo
 
 This project showcases a simple React App. The user can enter an array of file path strings (e.g. ['root/test', 'dev/dir1'] ) and the App will visualize it by rendering a collapsable tree.
+Only invalid Unix paths will be marked, otherwise the App tries to render as much of the given input as possible.
 
 # [Deployment Link here](https://directory-gui-demo-4fww7tcb9-0xapplepies-projects.vercel.app/)
 
@@ -8,7 +9,8 @@ This project showcases a simple React App. The user can enter an array of file p
 
 Further considerations and improvements:
 
-TBD
+- Dark Mode
+- possible different deployment
 
 ## Available Scripts
 
