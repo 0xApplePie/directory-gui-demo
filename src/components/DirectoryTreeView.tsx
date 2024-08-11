@@ -1,13 +1,13 @@
 import React from 'react'
 import TreeNode from './DirectoryTreeNode'
 import { Directory } from '../types/types'
-import { styled } from 'styled-components'
+import styled from 'styled-components'
 
 type TreeViewProps = {
   pathString: string
 }
 
-const TreeViewContainer = styled.div`
+const TreeViewUlElement = styled.ul`
   font-family: Arial, sans-serif;
   font-size: 14px;
   color: #333;
@@ -15,6 +15,7 @@ const TreeViewContainer = styled.div`
   background-color: #f9f9f9;
   padding: 10px;
   border-radius: 5px;
+  list-style: none;
 `
 
 const parsePaths = (pathString: string): string[] => {
@@ -52,16 +53,12 @@ const TreeView: React.FC<TreeViewProps> = ({ pathString }) => {
   const paths = parsePaths(pathString)
   const treeData = transformToTree(paths)
 
-  //console.log(treeData)
-
   return (
-    <TreeViewContainer>
+    <TreeViewUlElement>
       {treeData.map((node, index) => (
-        <>
-          <TreeNode key={index} node={node} level={0} />
-        </>
+        <TreeNode key={index} node={node} level={0} />
       ))}
-    </TreeViewContainer>
+    </TreeViewUlElement>
   )
 }
 
